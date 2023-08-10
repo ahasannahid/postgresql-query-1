@@ -16,3 +16,13 @@ RIGHT JOIN department ON department.department_id = employee.department_id;
 SELECT *
 FROM employee
 FULL JOIN department ON department.department_id = employee.department_id;
+
+-- natural JOIN(kom use hoy) . same nam er column match kore merge kore fele.
+SELECT *
+FROM employee
+NATURAL JOIN department;
+
+-- cross join (kom use hoy)
+SELECT *
+FROM employee
+CROSS JOIN department;
