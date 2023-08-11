@@ -23,3 +23,13 @@ GROUP BY d.name;
 SELECT d.name, AVG(e.salary),MAX(e.salary), MIN(e.salary), SUM(e.salary), count(*) from departments d
 FULL JOIN employees e on e.deptid = d.deptid
 GROUP BY d.deptid;
+
+-- condition in group by.(where use kora jay na. having use korte hoy.)
+SELECT d.name, AVG(e.salary),MAX(e.salary), MIN(e.salary), SUM(e.salary) from employees e
+FULL JOIN departments d on e.deptid = d.deptid
+GROUP BY d.name HAVING d.name = 'Biology';
+
+SELECT d.name, AVG(e.salary),MAX(e.salary), MIN(e.salary), SUM(e.salary), count(*) from departments d
+FULL JOIN employees e on e.deptid = d.deptid
+GROUP BY d.deptid HAVING AVG(e.salary) > 50000;
+
